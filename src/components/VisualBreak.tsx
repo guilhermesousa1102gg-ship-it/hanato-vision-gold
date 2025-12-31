@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import heroEye from "@/assets/hero-eye.jpg";
-import drMarcelo from "@/assets/dr-marcelo.jpg";
+import surgeryScene2 from "@/assets/surgery-scene-2.png";
 
 interface VisualBreakProps {
   image: string;
@@ -80,8 +80,8 @@ export const VisualBreakEye = () => (
 
 export const VisualBreakDoctor = () => (
   <VisualBreak
-    image={drMarcelo}
-    quote="Meu compromisso é entregar resultados naturais que realcem sua beleza única."
+    image={surgeryScene2}
+    quote="Cada procedimento é conduzido com precisão cirúrgica e atenção aos mínimos detalhes."
     author="Dr. Marcelo Hanato"
     reversed
   />
