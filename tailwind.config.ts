@@ -51,12 +51,14 @@ export default {
           DEFAULT: "hsl(var(--gold))",
           light: "hsl(var(--gold-light))",
           dark: "hsl(var(--gold-dark))",
+          muted: "hsl(var(--gold-muted))",
         },
         navy: {
           DEFAULT: "hsl(var(--navy))",
           light: "hsl(var(--navy-light))",
           medium: "hsl(var(--navy-medium))",
         },
+        cream: "hsl(var(--cream))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -69,8 +71,9 @@ export default {
         },
       },
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        cormorant: ["Cormorant Garamond", "serif"],
+        baskerville: ["Libre Baskerville", "serif"],
+        raleway: ["Raleway", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -106,13 +109,13 @@ export default {
           "0%": { opacity: "0", transform: "translateX(-50px)" },
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
-        "gradient-shift": {
-          "0%, 100%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-        },
         "float-slow": {
-          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-          "50%": { transform: "translateY(-20px) rotate(3deg)" },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+        "line-grow": {
+          "0%": { height: "0" },
+          "100%": { height: "100%" },
         },
       },
       animation: {
@@ -123,20 +126,16 @@ export default {
         "scale-in": "scale-in 0.5s ease-out forwards",
         "slide-in-right": "slide-in-right 0.6s ease-out forwards",
         "slide-in-left": "slide-in-left 0.6s ease-out forwards",
-        "gradient-shift": "gradient-shift 8s ease infinite",
-        "float-slow": "float-slow 6s ease-in-out infinite",
+        "float-slow": "float-slow 8s ease-in-out infinite",
+        "line-grow": "line-grow 1.5s ease-out forwards",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-gold": "var(--gradient-gold)",
-        "gradient-navy": "var(--gradient-navy)",
-        "gradient-hero": "var(--gradient-hero)",
-        "gradient-glass": "var(--gradient-glass)",
       },
       boxShadow: {
         gold: "var(--shadow-gold)",
         soft: "var(--shadow-soft)",
-        glass: "var(--shadow-glass)",
+        elegant: "var(--shadow-elegant)",
       },
     },
   },

@@ -1,50 +1,36 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import {
-  Shield,
-  Heart,
-  Clock,
-  Award,
-  Stethoscope,
-  UserCheck,
-} from "lucide-react";
 
 const differentials = [
   {
-    icon: Shield,
-    title: "Segurança Total",
-    description:
-      "Procedimentos realizados em hospitais e clínicas certificadas, com equipamentos de última geração e equipe médica qualificada.",
+    number: "01",
+    title: "Formação de Excelência",
+    description: "Especialização em Cirurgia Plástica pela UNESP e formação complementar em Oftalmologia pela UNICAMP, oferecendo uma visão única e integrada.",
   },
   {
-    icon: Heart,
-    title: "Cuidado Humanizado",
-    description:
-      "Cada paciente é única. Atendimento personalizado que considera suas expectativas, anatomia e estilo de vida.",
-  },
-  {
-    icon: Clock,
-    title: "Acompanhamento Contínuo",
-    description:
-      "Seguimento diferenciado no pós-operatório com consultas regulares para garantir sua recuperação ideal.",
-  },
-  {
-    icon: Award,
-    title: "Resultados Naturais",
-    description:
-      "Técnicas modernas que preservam a naturalidade e harmonia do corpo, sem exageros ou artificialidade.",
-  },
-  {
-    icon: Stethoscope,
+    number: "02",
     title: "Técnica Refinada",
-    description:
-      "Formação sólida e atualização constante em técnicas avançadas de cirurgia plástica nacional e internacional.",
+    description: "Procedimentos realizados com as técnicas mais avançadas e modernas, sempre priorizando resultados naturais e harmoniosos.",
   },
   {
-    icon: UserCheck,
-    title: "Transparência",
-    description:
-      "Esclarecimento completo sobre o procedimento, recuperação, riscos e expectativas realistas de resultado.",
+    number: "03",
+    title: "Pós-Operatório Diferenciado",
+    description: "Acompanhamento personalizado e atencioso durante toda a recuperação, com suporte por WhatsApp e consultas frequentes.",
+  },
+  {
+    number: "04",
+    title: "Segurança Total",
+    description: "Procedimentos realizados em hospitais e clínicas certificadas, com equipamentos de última geração e equipe qualificada.",
+  },
+  {
+    number: "05",
+    title: "Atendimento Humanizado",
+    description: "Cada paciente é única. Esclarecimento completo sobre o procedimento, expectativas realistas e transparência total.",
+  },
+  {
+    number: "06",
+    title: "Resultados Naturais",
+    description: "Abordagem artística que preserva a naturalidade e realça a beleza individual, sem exageros ou artificialidade.",
   },
 ];
 
@@ -56,74 +42,63 @@ const Differentials = () => {
     <section
       id="diferenciais"
       ref={ref}
-      className="py-24 lg:py-32 relative overflow-hidden"
+      className="py-32 lg:py-40 relative overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-navy-medium to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-navy-light/30 to-background" />
 
-      {/* Decorative Grid */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      />
+      {/* Decorative Line */}
+      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/10 to-transparent" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
         >
-          <span className="section-subtitle">Por Que Escolher</span>
-          <h2 className="section-title text-foreground mb-4">
-            Nossos <span className="text-gradient-gold">Diferenciais</span>
+          <span className="section-subtitle">Diferenciais</span>
+          <h2 className="section-title text-foreground">
+            Por Que <span className="text-gradient-gold italic">Escolher</span>
           </h2>
-          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-            O que torna a experiência com o Dr. Marcelo Hanato única e especial
-          </p>
+          <div className="w-16 h-px bg-primary/50 mx-auto mt-8" />
         </motion.div>
 
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {differentials.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group"
-            >
-              <div className="h-full glass-card rounded-2xl p-8 hover:border-primary/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-gold">
-                {/* Icon */}
-                <div className="mb-6 relative">
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-500">
-                    <item.icon
-                      size={32}
-                      className="text-primary group-hover:scale-110 transition-transform duration-300"
-                    />
+        {/* Differentials Grid - Timeline Style */}
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 lg:gap-y-16">
+            {differentials.map((item, index) => (
+              <motion.div
+                key={item.number}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative ${index % 2 === 1 ? "md:mt-12" : ""}`}
+              >
+                {/* Card */}
+                <div className="group relative p-8 border border-border/30 bg-card/30 hover:border-primary/30 transition-all duration-500 hover:bg-card/50">
+                  {/* Number */}
+                  <span className="text-5xl font-cormorant text-primary/20 absolute -top-2 -left-2 group-hover:text-primary/30 transition-colors duration-500">
+                    {item.number}
+                  </span>
+
+                  {/* Content */}
+                  <div className="pt-8">
+                    <h3 className="text-xl font-baskerville text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-foreground/50 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-                  {/* Glow Effect */}
-                  <div className="absolute inset-0 w-16 h-16 rounded-xl bg-primary/20 blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+
+                  {/* Decorative Corner */}
+                  <div className="absolute bottom-0 right-0 w-12 h-12 border-r border-b border-primary/0 group-hover:border-primary/30 transition-colors duration-500" />
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-semibold text-foreground mb-3 font-playfair">
-                  {item.title}
-                </h3>
-                <p className="text-foreground/60 leading-relaxed">
-                  {item.description}
-                </p>
-
-                {/* Decorative Line */}
-                <div className="mt-6 h-px w-12 bg-gradient-to-r from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* CTA */}
@@ -131,16 +106,16 @@ const Differentials = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16"
+          className="text-center mt-20"
         >
-          <p className="text-foreground/60 mb-6">
+          <p className="text-foreground/40 mb-8 max-w-lg mx-auto">
             Pronta para dar o primeiro passo rumo à sua transformação?
           </p>
           <a
             href="https://wa.link/vjbxr3"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-hero rounded-full inline-block"
+            className="btn-hero inline-block"
           >
             Agende sua Consulta
           </a>

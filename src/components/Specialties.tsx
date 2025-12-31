@@ -1,6 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Eye, Sparkles, Heart } from "lucide-react";
+import { useRef } from "react";
 import blefaroplastia from "@/assets/blefaroplastia.jpg";
 import lipoHD from "@/assets/proc-lipo1.png";
 import mamoplastia from "@/assets/proc-mama.png";
@@ -11,229 +10,145 @@ const specialties = [
     title: "Blefaroplastia",
     subtitle: "Cirurgia das Pálpebras",
     description:
-      "Rejuvenesça seu olhar com a correção de pálpebras caídas e bolsas. Um procedimento delicado que remove o excesso de pele e gordura, proporcionando um olhar mais jovem, descansado e expressivo.",
+      "Rejuvenesça seu olhar com a correção de pálpebras caídas e bolsas. Um procedimento delicado que remove o excesso de pele e gordura, proporcionando um olhar mais jovem e expressivo.",
     benefits: [
       "Olhar mais jovem e descansado",
       "Melhora do campo visual",
       "Facilidade para aplicar maquiagem",
-      "Recuperação rápida",
+      "Recuperação rápida e discreta",
     ],
     image: blefaroplastia,
-    icon: Eye,
-    color: "from-blue-500/20 to-primary/20",
   },
   {
     id: 2,
     title: "Lipo HD",
     subtitle: "Lipoaspiração de Alta Definição",
     description:
-      "Escultura corporal avançada que remove gordura localizada e define os contornos musculares. Técnica moderna que proporciona um corpo mais definido e atlético, respeitando as proporções naturais.",
+      "Escultura corporal avançada que remove gordura localizada e realça os contornos naturais do corpo. Técnica moderna para um resultado atlético e harmonioso.",
     benefits: [
       "Definição muscular visível",
       "Contornos corporais harmoniosos",
-      "Resultados duradouros",
+      "Resultados naturais e duradouros",
       "Técnica minimamente invasiva",
     ],
     image: lipoHD,
-    icon: Sparkles,
-    color: "from-amber-500/20 to-primary/20",
   },
   {
     id: 3,
-    title: "Mamoplastia com Sutiã Interno",
-    subtitle: "Técnica Exclusiva",
+    title: "Mamoplastia",
+    subtitle: "Técnica do Sutiã Interno",
     description:
-      "Técnica inovadora que oferece sustentação interna permanente às mamas, proporcionando resultados mais duradouros e naturais. Ideal para aumento, redução ou lifting mamário com suporte adicional.",
+      "Técnica inovadora que oferece sustentação interna permanente às mamas. Ideal para aumento, redução ou lifting mamário com resultados mais duradouros.",
     benefits: [
-      "Sustentação duradoura",
-      "Resultados mais naturais",
+      "Sustentação superior e duradoura",
+      "Formato mais natural",
       "Liberdade para vestir qualquer roupa",
-      "Maior autoestima",
+      "Resultados que acompanham seu corpo",
     ],
     image: mamoplastia,
-    icon: Heart,
-    color: "from-rose-500/20 to-primary/20",
   },
 ];
 
 const Specialties = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const nextSlide = () => {
-    setActiveIndex((prev) => (prev + 1) % specialties.length);
-  };
-
-  const prevSlide = () => {
-    setActiveIndex((prev) => (prev - 1 + specialties.length) % specialties.length);
-  };
 
   return (
     <section
       id="especialidades"
       ref={ref}
-      className="py-24 lg:py-32 relative overflow-hidden"
+      className="py-32 lg:py-40 relative overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-navy-light/30 to-background" />
-      
-      {/* Animated Background Orbs */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-radial from-blue-500/10 to-transparent blur-3xl" />
+      <div className="absolute inset-0 bg-background" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20 lg:mb-32"
         >
-          <span className="section-subtitle">Áreas de Atuação</span>
-          <h2 className="section-title text-foreground mb-4">
-            Nossas <span className="text-gradient-gold">Especialidades</span>
+          <span className="section-subtitle">Especialidades</span>
+          <h2 className="section-title text-foreground">
+            A Arte da <span className="text-gradient-gold italic">Transformação</span>
           </h2>
-          <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-            Procedimentos realizados com técnica avançada e atenção aos detalhes 
-            para resultados naturais e harmoniosos
-          </p>
+          <div className="w-16 h-px bg-primary/50 mx-auto mt-8" />
         </motion.div>
 
-        {/* Carousel */}
-        <div className="relative">
-          {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Image Side */}
+        {/* Specialties Grid - Rolex Style */}
+        <div className="space-y-32 lg:space-y-48">
+          {specialties.map((specialty, index) => (
             <motion.div
-              key={`image-${activeIndex}`}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="relative order-2 lg:order-1"
+              key={specialty.id}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
+                index % 2 === 1 ? "lg:flex-row-reverse" : ""
+              }`}
             >
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] border-gold-glow">
-                <img
-                  src={specialties[activeIndex].image}
-                  alt={specialties[activeIndex].title}
-                  className="w-full h-full object-cover"
-                />
-                <div
-                  className={`absolute inset-0 bg-gradient-to-t ${specialties[activeIndex].color} opacity-40`}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-
-                {/* Caption */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="glass-card rounded-xl p-4">
-                    <div className="flex items-center gap-3">
-                      {(() => {
-                        const Icon = specialties[activeIndex].icon;
-                        return <Icon size={24} className="text-primary" />;
-                      })()}
-                      <div>
-                        <h4 className="font-semibold text-foreground">
-                          {specialties[activeIndex].title}
-                        </h4>
-                        <p className="text-sm text-foreground/60">
-                          {specialties[activeIndex].subtitle}
-                        </p>
-                      </div>
-                    </div>
+              {/* Image */}
+              <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+                <div className="relative overflow-hidden group">
+                  <motion.img
+                    src={specialty.image}
+                    alt={specialty.title}
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.6 }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+                  
+                  {/* Number Badge */}
+                  <div className="absolute top-6 left-6">
+                    <span className="text-6xl lg:text-8xl font-cormorant text-primary/20">
+                      0{specialty.id}
+                    </span>
                   </div>
                 </div>
+
+                {/* Decorative Elements */}
+                <div className={`absolute -top-4 ${index % 2 === 0 ? '-left-4' : '-right-4'} w-16 h-16 border-l border-t border-primary/20`} />
+                <div className={`absolute -bottom-4 ${index % 2 === 0 ? '-right-4' : '-left-4'} w-16 h-16 border-r border-b border-primary/20`} />
               </div>
 
-              {/* Decorative */}
-              <div className="absolute -z-10 -top-4 -right-4 w-full h-full border border-primary/20 rounded-2xl" />
-            </motion.div>
+              {/* Content */}
+              <div className={index % 2 === 1 ? "lg:order-1" : ""}>
+                <span className="text-xs tracking-[0.3em] text-primary/60 uppercase mb-4 block">
+                  {specialty.subtitle}
+                </span>
+                <h3 className="text-4xl lg:text-5xl xl:text-6xl font-cormorant text-foreground mb-6">
+                  {specialty.title}
+                </h3>
 
-            {/* Content Side */}
-            <motion.div
-              key={`content-${activeIndex}`}
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="order-1 lg:order-2"
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 rounded-xl bg-primary/10">
-                  {(() => {
-                    const Icon = specialties[activeIndex].icon;
-                    return <Icon size={32} className="text-primary" />;
-                  })()}
+                <div className="w-12 h-px bg-primary/30 mb-8" />
+
+                <p className="text-foreground/60 leading-relaxed mb-10">
+                  {specialty.description}
+                </p>
+
+                <div className="space-y-4 mb-10">
+                  {specialty.benefits.map((benefit, i) => (
+                    <div key={benefit} className="flex items-center gap-4">
+                      <div className="w-1 h-1 rounded-full bg-primary" />
+                      <span className="text-sm text-foreground/50">{benefit}</span>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-foreground font-playfair">
-                    {specialties[activeIndex].title}
-                  </h3>
-                  <p className="text-primary">{specialties[activeIndex].subtitle}</p>
-                </div>
+
+                <a
+                  href="https://wa.link/vjbxr3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline-gold inline-block"
+                >
+                  Agendar Avaliação
+                </a>
               </div>
-
-              <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                {specialties[activeIndex].description}
-              </p>
-
-              <div className="space-y-3 mb-8">
-                {specialties[activeIndex].benefits.map((benefit, i) => (
-                  <motion.div
-                    key={benefit}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-                    className="flex items-center gap-3"
-                  >
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-foreground/80">{benefit}</span>
-                  </motion.div>
-                ))}
-              </div>
-
-              <a
-                href="https://wa.link/vjbxr3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-hero rounded-full inline-block"
-              >
-                Agendar Avaliação
-              </a>
             </motion.div>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-6 mt-12">
-            <button
-              onClick={prevSlide}
-              className="p-3 rounded-full glass-card hover:bg-primary/20 transition-colors"
-              aria-label="Anterior"
-            >
-              <ChevronLeft size={24} className="text-primary" />
-            </button>
-
-            <div className="flex gap-2">
-              {specialties.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === activeIndex
-                      ? "w-8 bg-primary"
-                      : "w-2 bg-foreground/30 hover:bg-foreground/50"
-                  }`}
-                  aria-label={`Ir para slide ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            <button
-              onClick={nextSlide}
-              className="p-3 rounded-full glass-card hover:bg-primary/20 transition-colors"
-              aria-label="Próximo"
-            >
-              <ChevronRight size={24} className="text-primary" />
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </section>
