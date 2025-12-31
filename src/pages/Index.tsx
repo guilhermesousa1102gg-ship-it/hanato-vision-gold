@@ -1,10 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import { VisualBreakEye } from "@/components/VisualBreak";
+import { VisualBreakEye, VisualBreakDoctor } from "@/components/VisualBreak";
 import Specialties from "@/components/Specialties";
 import Differentials from "@/components/Differentials";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 import Locations from "@/components/Locations";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
@@ -27,6 +28,8 @@ const Index = () => {
         <Specialties />
         <Differentials />
         <Testimonials />
+        <VisualBreakDoctor />
+        <FAQ />
         <Locations />
       </main>
 
