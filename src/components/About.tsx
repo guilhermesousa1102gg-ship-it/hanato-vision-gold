@@ -66,8 +66,7 @@ const About = () => {
           >
             <span className="section-subtitle">Sobre o Especialista</span>
             <h2 className="section-title text-foreground mb-8">
-              Compromisso com a<br />
-              <span className="text-gradient-gold italic">Excelência</span>
+              Compromisso com <span className="text-gradient-gold italic">a Excelência</span>
             </h2>
 
             <div className="w-16 h-px bg-primary/50 mb-8" />
