@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Phone, MapPin, Mail, Heart } from "lucide-react";
+import { Instagram, Phone } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -8,59 +8,59 @@ const Footer = () => {
   return (
     <footer id="contato" className="relative overflow-hidden">
       {/* Top Divider */}
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       {/* Main Footer */}
-      <div className="bg-gradient-to-b from-navy-medium to-background py-16 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="bg-navy-medium py-20 lg:py-28">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
             {/* Brand Column */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
               className="lg:col-span-1"
             >
               <img
                 src={logo}
                 alt="Dr. Marcelo Hanato"
-                className="h-12 mb-6"
+                className="h-10 mb-8"
               />
-              <p className="text-foreground/60 text-sm mb-6 leading-relaxed">
-                Cirurgião plástico dedicado a transformar vidas através da arte 
-                e ciência da cirurgia plástica. Excelência técnica e cuidado humanizado.
+              <p className="text-foreground/40 text-sm leading-relaxed mb-8">
+                Cirurgião plástico dedicado à transformação e bem-estar. 
+                Excelência técnica aliada ao cuidado humanizado.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-3">
                 <a
                   href="https://www.instagram.com/drmarcelohanato"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 glass-card rounded-full hover:bg-primary/20 transition-colors"
+                  className="w-10 h-10 border border-border/30 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all"
                   aria-label="Instagram"
                 >
-                  <Instagram size={20} className="text-primary" />
+                  <Instagram size={18} className="text-foreground/60" />
                 </a>
                 <a
                   href="https://wa.link/vjbxr3"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 glass-card rounded-full hover:bg-primary/20 transition-colors"
+                  className="w-10 h-10 border border-border/30 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all"
                   aria-label="WhatsApp"
                 >
-                  <Phone size={20} className="text-primary" />
+                  <Phone size={18} className="text-foreground/60" />
                 </a>
               </div>
             </motion.div>
 
-            {/* Quick Links */}
+            {/* Navigation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h4 className="text-lg font-semibold text-foreground mb-6 font-playfair">
+              <h4 className="text-xs tracking-[0.3em] text-foreground/60 uppercase mb-6">
                 Navegação
               </h4>
               <ul className="space-y-3">
@@ -74,7 +74,7 @@ const Footer = () => {
                   <li key={link.href}>
                     <a
                       href={link.href}
-                      className="text-foreground/60 hover:text-primary transition-colors text-sm"
+                      className="text-foreground/40 hover:text-primary transition-colors text-sm"
                     >
                       {link.label}
                     </a>
@@ -88,17 +88,16 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h4 className="text-lg font-semibold text-foreground mb-6 font-playfair">
+              <h4 className="text-xs tracking-[0.3em] text-foreground/60 uppercase mb-6">
                 Especialidades
               </h4>
               <ul className="space-y-3">
-                <li className="text-foreground/60 text-sm">Blefaroplastia</li>
-                <li className="text-foreground/60 text-sm">Lipo HD</li>
-                <li className="text-foreground/60 text-sm">Mamoplastia com Sutiã Interno</li>
-                <li className="text-foreground/60 text-sm">Cirurgia das Pálpebras</li>
-                <li className="text-foreground/60 text-sm">Contorno Corporal</li>
+                <li className="text-foreground/40 text-sm">Blefaroplastia</li>
+                <li className="text-foreground/40 text-sm">Lipo HD</li>
+                <li className="text-foreground/40 text-sm">Mamoplastia</li>
+                <li className="text-foreground/40 text-sm">Cirurgia das Pálpebras</li>
               </ul>
             </motion.div>
 
@@ -107,48 +106,39 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h4 className="text-lg font-semibold text-foreground mb-6 font-playfair">
+              <h4 className="text-xs tracking-[0.3em] text-foreground/60 uppercase mb-6">
                 Contato
               </h4>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <MapPin size={18} className="text-primary flex-shrink-0 mt-1" />
-                  <span className="text-foreground/60 text-sm">
-                    São Paulo, São José dos Campos e Bertioga
-                  </span>
+              <ul className="space-y-3 mb-8">
+                <li className="text-foreground/40 text-sm">
+                  São Paulo · São José dos Campos · Bertioga
                 </li>
-                <li className="flex items-center gap-3">
-                  <Phone size={18} className="text-primary flex-shrink-0" />
+                <li>
                   <a
-                    href="https://wa.link/vjbxr3"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground/60 hover:text-primary transition-colors text-sm"
+                    href="mailto:clinicahanato@gmail.com"
+                    className="text-foreground/40 hover:text-primary transition-colors text-sm"
                   >
-                    WhatsApp
+                    clinicahanato@gmail.com
                   </a>
                 </li>
-                <li className="flex items-center gap-3">
-                  <Instagram size={18} className="text-primary flex-shrink-0" />
+                <li>
                   <a
                     href="https://www.instagram.com/drmarcelohanato"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-foreground/60 hover:text-primary transition-colors text-sm"
+                    className="text-primary hover:text-foreground transition-colors text-sm"
                   >
                     @drmarcelohanato
                   </a>
                 </li>
               </ul>
-
-              {/* CTA */}
               <a
                 href="https://wa.link/vjbxr3"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-hero rounded-full text-xs mt-6 inline-block"
+                className="btn-outline-gold text-[10px] inline-block"
               >
                 Agendar Consulta
               </a>
@@ -158,22 +148,18 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-background/50 py-6 border-t border-border/30">
-        <div className="container mx-auto px-4 lg:px-8">
+      <div className="bg-background py-6 border-t border-border/20">
+        <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-foreground/40 text-sm text-center md:text-left">
+            <p className="text-foreground/30 text-xs tracking-wide">
               © {currentYear} Dr. Marcelo Hanato. Todos os direitos reservados.
             </p>
-            <p className="text-foreground/40 text-sm flex items-center gap-1">
-              Feito com <Heart size={14} className="text-primary" /> para transformar vidas
+            <p className="text-foreground/30 text-xs">
+              CRM/SP 144721 · RQE 91564
             </p>
           </div>
         </div>
       </div>
-
-      {/* Decorative Background */}
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-primary/5 to-transparent blur-3xl pointer-events-none" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-radial from-blue-500/5 to-transparent blur-3xl pointer-events-none" />
     </footer>
   );
 };
