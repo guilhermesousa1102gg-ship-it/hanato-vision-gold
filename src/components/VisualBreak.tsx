@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import heroEye from "@/assets/hero-eye.jpg";
-import surgeryScene2 from "@/assets/surgery-scene-2.png";
+import drMarceloSeated from "@/assets/dr-marcelo-seated.jpg";
 
 interface VisualBreakProps {
   image: string;
@@ -74,14 +74,15 @@ const VisualBreak = ({ image, quote, author, reversed = false }: VisualBreakProp
 export const VisualBreakEye = () => (
   <VisualBreak
     image={heroEye}
-    quote="A beleza está nos detalhes. Cada procedimento é uma obra de arte única."
+    quote="O olhar é a janela da alma. Cuidar dele é preservar a essência de quem você é."
+    author="Dr. Marcelo Hanato"
   />
 );
 
 export const VisualBreakDoctor = () => (
   <VisualBreak
-    image={surgeryScene2}
-    quote="Cada procedimento é conduzido com precisão cirúrgica e atenção aos mínimos detalhes."
+    image={drMarceloSeated}
+    quote="A blefaroplastia é a união perfeita entre a precisão da oftalmologia e a arte da cirurgia plástica."
     author="Dr. Marcelo Hanato"
     reversed
   />

@@ -4,33 +4,33 @@ import { useRef } from "react";
 const differentials = [
   {
     number: "01",
-    title: "Formação de Excelência",
-    description: "Especialização em Cirurgia Plástica pela UNESP e formação complementar em Oftalmologia pela UNICAMP, oferecendo uma visão única e integrada.",
+    title: "Dupla Especialização",
+    description: "Formação em Cirurgia Plástica pela UNESP e Oftalmologia pela UNICAMP, garantindo expertise única na região dos olhos.",
   },
   {
     number: "02",
-    title: "Técnica Refinada",
-    description: "Procedimentos realizados com as técnicas mais avançadas e modernas, sempre priorizando resultados naturais e harmoniosos.",
+    title: "Precisão Oftalmológica",
+    description: "Conhecimento profundo da anatomia ocular permite cirurgias mais seguras e resultados mais naturais na blefaroplastia.",
   },
   {
     number: "03",
-    title: "Pós-Operatório Diferenciado",
-    description: "Acompanhamento personalizado e atencioso durante toda a recuperação, com suporte por WhatsApp e consultas frequentes.",
+    title: "Técnica Refinada",
+    description: "Procedimentos realizados com as técnicas mais avançadas, priorizando cicatrizes imperceptíveis e recuperação rápida.",
   },
   {
     number: "04",
-    title: "Segurança Total",
-    description: "Procedimentos realizados em hospitais e clínicas certificadas, com equipamentos de última geração e equipe qualificada.",
+    title: "Pós-Operatório Diferenciado",
+    description: "Acompanhamento personalizado durante toda a recuperação, com suporte por WhatsApp e consultas frequentes.",
   },
   {
     number: "05",
-    title: "Atendimento Humanizado",
-    description: "Cada paciente é única. Esclarecimento completo sobre o procedimento, expectativas realistas e transparência total.",
+    title: "Segurança Total",
+    description: "Procedimentos realizados em centros cirúrgicos certificados, com equipamentos de última geração.",
   },
   {
     number: "06",
     title: "Resultados Naturais",
-    description: "Abordagem artística que preserva a naturalidade e realça a beleza individual, sem exageros ou artificialidade.",
+    description: "Abordagem artística que preserva a expressão natural do olhar, sem exageros ou aparência artificial.",
   },
 ];
 
@@ -109,7 +109,7 @@ const Differentials = () => {
           className="text-center mt-20"
         >
           <p className="text-foreground/40 mb-8 max-w-lg mx-auto">
-            Pronta para dar o primeiro passo rumo à sua transformação?
+            Pronta para renovar seu olhar com segurança e naturalidade?
           </p>
           <a
             href="https://wa.link/vjbxr3"
