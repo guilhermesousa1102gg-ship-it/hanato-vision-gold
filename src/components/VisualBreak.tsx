@@ -15,7 +15,7 @@ const VisualBreak = ({ image, quote, author, reversed = false }: VisualBreakProp
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative min-h-[70vh] lg:min-h-[80vh] flex items-center overflow-hidden">
+    <section ref={ref} className="relative min-h-[60vh] md:min-h-[70vh] lg:min-h-[80vh] flex items-center overflow-hidden">
       {/* Full Background Image */}
       <div className="absolute inset-0">
         <motion.div
@@ -27,17 +27,18 @@ const VisualBreak = ({ image, quote, author, reversed = false }: VisualBreakProp
           <img
             src={image}
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center md:object-center"
+            style={{ objectPosition: "center 40%" }}
           />
         </motion.div>
         
         {/* Overlay */}
         <div className={`absolute inset-0 bg-gradient-to-r ${
           reversed 
-            ? 'from-transparent via-background/70 to-background' 
-            : 'from-background via-background/70 to-transparent'
+            ? 'from-transparent via-background/60 to-background/90' 
+            : 'from-background/90 via-background/60 to-transparent'
         }`} />
-        <div className="absolute inset-0 bg-background/30" />
+        <div className="absolute inset-0 bg-background/20" />
       </div>
 
       {/* Content */}
@@ -48,9 +49,9 @@ const VisualBreak = ({ image, quote, author, reversed = false }: VisualBreakProp
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className={`w-16 h-px bg-primary mb-8 ${reversed ? 'ml-auto' : ''}`} />
+            <div className={`w-12 md:w-16 h-px bg-primary mb-6 md:mb-8 ${reversed ? 'ml-auto' : ''}`} />
             
-            <blockquote className="text-2xl md:text-3xl lg:text-4xl font-cormorant text-foreground leading-relaxed mb-8 italic">
+            <blockquote className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-cormorant text-foreground leading-relaxed mb-6 md:mb-8 italic">
               "{quote}"
             </blockquote>
 

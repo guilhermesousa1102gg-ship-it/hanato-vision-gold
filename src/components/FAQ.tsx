@@ -39,13 +39,13 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" ref={ref} className="py-32 lg:py-40 relative overflow-hidden">
+    <section id="faq" ref={ref} className="py-20 md:py-32 lg:py-40 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-navy-medium to-background" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -77,9 +77,9 @@ const FAQ = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full py-6 flex items-center justify-between text-left group"
+                className="w-full py-5 md:py-6 flex items-center justify-between text-left group"
               >
-                <span className="text-lg font-cormorant text-foreground group-hover:text-primary transition-colors duration-300 pr-4">
+                <span className="text-base md:text-lg font-cormorant text-foreground group-hover:text-primary transition-colors duration-300 pr-4">
                   {faq.question}
                 </span>
                 <motion.div

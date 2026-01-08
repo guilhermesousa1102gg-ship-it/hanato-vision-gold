@@ -42,21 +42,21 @@ const Differentials = () => {
     <section
       id="diferenciais"
       ref={ref}
-      className="py-32 lg:py-40 relative overflow-hidden"
+      className="py-20 md:py-32 lg:py-40 relative overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-navy-light/30 to-background" />
 
       {/* Decorative Line */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/10 to-transparent" />
+      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-primary/10 to-transparent hidden md:block" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-20"
         >
           <span className="section-subtitle">Diferenciais</span>
           <h2 className="section-title text-foreground">
@@ -67,7 +67,7 @@ const Differentials = () => {
 
         {/* Differentials Grid - Timeline Style */}
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 lg:gap-y-16">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-x-16 md:gap-y-12 lg:gap-y-16">
             {differentials.map((item, index) => (
               <motion.div
                 key={item.number}
@@ -106,7 +106,7 @@ const Differentials = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-20"
+          className="text-center mt-12 md:mt-20"
         >
           <p className="text-foreground/40 mb-8 max-w-lg mx-auto">
             Pronta para renovar seu olhar com segurança e naturalidade?
