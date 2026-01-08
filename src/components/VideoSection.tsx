@@ -1,10 +1,20 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { Volume2, VolumeX } from "lucide-react";
 import videoDoutor from "@/assets/video-doutor.mp4";
 
 const VideoSection = () => {
   const ref = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [isMuted, setIsMuted] = useState(true);
+
+  const toggleSound = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(!isMuted);
+    }
+  };
 
   return (
     <section ref={ref} className="relative py-0 overflow-hidden">
@@ -21,6 +31,7 @@ const VideoSection = () => {
         {/* Video Wrapper with Aspect Ratio */}
         <div className="relative w-full aspect-[21/9]">
           <video
+            ref={videoRef}
             autoPlay
             loop
             muted
@@ -33,6 +44,22 @@ const VideoSection = () => {
           {/* Subtle Vignette Effect */}
           <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-background/20 pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-transparent to-background/10 pointer-events-none" />
+
+          {/* Sound Toggle Button */}
+          <motion.button
+            onClick={toggleSound}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-20 p-3 rounded-full bg-background/80 backdrop-blur-sm border border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 group"
+            aria-label={isMuted ? "Ativar som" : "Desativar som"}
+          >
+            {isMuted ? (
+              <VolumeX className="w-5 h-5 md:w-6 md:h-6" />
+            ) : (
+              <Volume2 className="w-5 h-5 md:w-6 md:h-6" />
+            )}
+          </motion.button>
         </div>
 
         {/* Bottom Decorative Line */}
