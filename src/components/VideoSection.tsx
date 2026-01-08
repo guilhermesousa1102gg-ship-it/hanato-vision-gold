@@ -28,22 +28,22 @@ const VideoSection = () => {
         {/* Top Decorative Line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent z-10" />
 
-        {/* Video Wrapper with Aspect Ratio */}
-        <div className="relative w-full aspect-[21/9]">
+        {/* Video Wrapper - Full Width with natural aspect ratio */}
+        <div className="relative w-full">
           <video
             ref={videoRef}
             autoPlay
             loop
             muted
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            className="w-full h-auto"
           >
             <source src={videoDoutor} type="video/mp4" />
           </video>
 
           {/* Subtle Vignette Effect */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-background/20 pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-transparent to-background/10 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-background/30 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/20 via-transparent to-background/20 pointer-events-none" />
 
           {/* Sound Toggle Button */}
           <motion.button
