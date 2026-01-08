@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import drMarcelo from "@/assets/dr-marcelo.jpg";
+import drMarceloHero from "@/assets/dr-marcelo-hero.jpg";
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -41,7 +41,7 @@ const Hero = () => {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: `url(${drMarcelo})`,
+              backgroundImage: `url(${drMarceloHero})`,
               backgroundPosition: "center top",
             }}
           />
@@ -59,7 +59,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="section-subtitle">Cirurgia Plástica</span>
+            <span className="section-subtitle">Blefaroplastia</span>
           </motion.div>
 
           <motion.h1
@@ -85,7 +85,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-lg md:text-xl text-foreground/60 mb-4 font-light leading-relaxed max-w-lg"
           >
-            Membro da Sociedade Brasileira de Cirurgia Plástica
+            Especialista em Cirurgia das Pálpebras
           </motion.p>
 
           <motion.p
@@ -94,7 +94,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="text-base text-foreground/40 mb-12 font-light"
           >
-            CRM/SP 144721 · RQE 91564
+            Cirurgião Plástico SBCP · Oftalmologista · CRM/SP 144721 · RQE 91564
           </motion.p>
 
           <motion.div
@@ -112,10 +112,10 @@ const Hero = () => {
               Agende sua Consulta
             </a>
             <a
-              href="#especialidades"
+              href="#blefaroplastia"
               className="btn-outline-gold"
             >
-              Conheça os Procedimentos
+              Conheça o Procedimento
             </a>
           </motion.div>
         </div>

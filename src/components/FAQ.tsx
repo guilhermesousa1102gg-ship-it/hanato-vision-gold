@@ -4,28 +4,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "Como é o pós-operatório das cirurgias plásticas?",
-    answer: "O pós-operatório varia de acordo com o procedimento realizado. Em geral, recomendamos repouso relativo nos primeiros dias, uso de malhas ou faixas compressivas quando indicado, e acompanhamento próximo com retornos frequentes. O Dr. Marcelo oferece um seguimento diferenciado no pós-operatório, garantindo suporte completo durante toda a recuperação."
+    question: "O que é a blefaroplastia?",
+    answer: "A blefaroplastia é uma cirurgia plástica que corrige o excesso de pele, gordura e flacidez das pálpebras superiores e/ou inferiores. É um dos procedimentos de rejuvenescimento facial mais realizados no mundo, proporcionando um olhar mais jovem e descansado."
   },
   {
-    question: "Qual tipo de anestesia é utilizado nos procedimentos?",
-    answer: "O tipo de anestesia depende do procedimento e das condições clínicas do paciente. Cirurgias menores podem ser realizadas com anestesia local e sedação, enquanto procedimentos maiores geralmente requerem anestesia geral. Tudo é avaliado de forma individualizada na consulta."
+    question: "Qual tipo de anestesia é utilizado?",
+    answer: "A blefaroplastia geralmente é realizada com anestesia local e sedação, garantindo conforto total durante o procedimento. Em alguns casos, pode-se optar pela anestesia geral. Tudo é avaliado de forma individualizada na consulta."
   },
   {
     question: "Quanto tempo dura a recuperação?",
-    answer: "Geralmente entre 3 a 6 meses os pacientes já percebem satisfação plena com os resultados. O retorno às atividades cotidianas varia: atividades leves podem ser retomadas em 1-2 semanas, enquanto exercícios físicos intensos geralmente são liberados após 4-6 semanas."
+    answer: "A recuperação da blefaroplastia é relativamente rápida. Os pontos são removidos entre 5 a 7 dias, e a maioria dos pacientes retorna às atividades normais em 7 a 10 dias. Inchaços e hematomas podem durar até 2 semanas, mas são facilmente disfarçados com óculos escuros."
   },
   {
-    question: "Como é feita a avaliação inicial?",
-    answer: "A consulta inicial é um momento dedicado a ouvir suas expectativas, realizar exame físico detalhado e discutir as opções de tratamento mais adequadas ao seu caso. O Dr. Marcelo acredita que a confiança entre médico e paciente é fundamental para um resultado satisfatório."
+    question: "A cicatriz fica visível?",
+    answer: "As cicatrizes da blefaroplastia são praticamente imperceptíveis. Na pálpebra superior, a incisão é feita no sulco natural, ficando escondida quando os olhos estão abertos. Na inferior, pode ser feita por dentro da pálpebra (transconjuntival) ou logo abaixo dos cílios."
   },
   {
-    question: "O Dr. Marcelo atende em quais regiões?",
-    answer: "O Dr. Marcelo atende em São Paulo (Vila Mariana), São José dos Campos (diversas regiões) e Bertioga. Cada unidade oferece estrutura completa para consultas e acompanhamento pós-operatório."
+    question: "Qual é o diferencial do Dr. Marcelo Hanato?",
+    answer: "O Dr. Marcelo Hanato possui formação dupla em Cirurgia Plástica e Oftalmologia, oferecendo uma combinação única de expertise estética e conhecimento profundo da anatomia ocular. Isso resulta em cirurgias mais seguras e resultados mais naturais."
   },
   {
     question: "Como posso agendar uma consulta?",
-    answer: "Você pode agendar sua consulta através do WhatsApp clicando nos botões disponíveis neste site, ou entrando em contato diretamente pelo telefone (13) 98182-2406. Nossa equipe terá prazer em encontrar o melhor horário para você."
+    answer: "Você pode agendar sua consulta através do WhatsApp clicando nos botões disponíveis neste site, ou entrando em contato diretamente pelo telefone (13) 98182-2406. Atendemos em São Paulo (Vila Mariana), São José dos Campos e Bertioga."
   }
 ];
 
@@ -116,7 +116,7 @@ const FAQ = () => {
           className="text-center mt-16"
         >
           <p className="text-foreground/40 mb-6">
-            Ainda tem dúvidas? Entre em contato conosco
+            Ainda tem dúvidas sobre blefaroplastia? Entre em contato
           </p>
           <a
             href="https://wa.link/vjbxr3"
