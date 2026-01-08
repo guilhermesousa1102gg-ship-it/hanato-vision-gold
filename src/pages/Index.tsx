@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import { VisualBreakEye, VisualBreakDoctor } from "@/components/VisualBreak";
+import VideoSection from "@/components/VideoSection";
 import Specialties from "@/components/Specialties";
 import Differentials from "@/components/Differentials";
 import Testimonials from "@/components/Testimonials";
@@ -26,6 +27,7 @@ const Index = () => {
         <VisualBreakEye />
         <Specialties />
         <Differentials />
+        <VideoSection />
         <Testimonials />
         <VisualBreakDoctor />
         <FAQ />
