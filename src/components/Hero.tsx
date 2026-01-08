@@ -39,10 +39,18 @@ const Hero = () => {
           style={{ transform: `translateY(${parallaxOffset * 0.5}px)` }}
         >
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-no-repeat"
             style={{
               backgroundImage: `url(${drMarceloHero})`,
-              backgroundPosition: "center top",
+              backgroundPosition: "calc(50% + 30px) top",
+            }}
+          />
+          {/* Mobile: position more to the right to show smile */}
+          <div
+            className="absolute inset-0 bg-cover bg-no-repeat md:hidden"
+            style={{
+              backgroundImage: `url(${drMarceloHero})`,
+              backgroundPosition: "calc(50% + 60px) 20%",
             }}
           />
           {/* Gradient Overlay on Image */}
