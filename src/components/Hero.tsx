@@ -35,27 +35,28 @@ const Hero = () => {
         
         {/* Doctor Image - Right Side */}
         <motion.div
-          className="absolute right-0 top-0 w-full lg:w-[60%] h-full"
+          className="absolute right-0 top-0 w-full lg:w-[65%] h-full"
           style={{ transform: `translateY(${parallaxOffset * 0.5}px)` }}
         >
+          {/* Desktop image positioning */}
           <div
-            className="absolute inset-0 bg-cover bg-no-repeat"
+            className="absolute inset-0 bg-cover bg-no-repeat hidden md:block"
             style={{
               backgroundImage: `url(${drMarceloHero})`,
-              backgroundPosition: "calc(50% + 30px) top",
+              backgroundPosition: "center 10%",
             }}
           />
-          {/* Mobile: position more to the right to show smile */}
+          {/* Mobile: position to show face fully */}
           <div
             className="absolute inset-0 bg-cover bg-no-repeat md:hidden"
             style={{
               backgroundImage: `url(${drMarceloHero})`,
-              backgroundPosition: "calc(50% + 100px) 15%",
+              backgroundPosition: "65% 5%",
             }}
           />
           {/* Gradient Overlay on Image */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/20" />
         </motion.div>
       </div>
 

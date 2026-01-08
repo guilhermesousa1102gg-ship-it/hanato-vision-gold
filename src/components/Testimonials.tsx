@@ -73,11 +73,11 @@ const Testimonials = () => {
   const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section ref={ref} className="py-32 lg:py-40 relative overflow-hidden">
+    <section ref={ref} className="py-20 md:py-32 lg:py-40 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-navy-light/20 to-background" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 mb-16">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10 mb-12 md:mb-16">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -119,12 +119,12 @@ const Testimonials = () => {
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
         {/* First Row - Left to Right */}
-        <div className="overflow-hidden mb-6">
-          <div className="marquee gap-6">
+        <div className="overflow-hidden mb-4 md:mb-6">
+          <div className="marquee gap-4 md:gap-6">
             {duplicatedTestimonials.map((testimonial, index) => (
               <div
                 key={`row1-${index}`}
-                className="testimonial-card flex-shrink-0 w-[380px] md:w-[450px]"
+                className="testimonial-card flex-shrink-0 w-[300px] md:w-[380px] lg:w-[450px]"
               >
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
@@ -160,11 +160,11 @@ const Testimonials = () => {
 
         {/* Second Row - Right to Left */}
         <div className="overflow-hidden">
-          <div className="marquee marquee-reverse gap-6">
+          <div className="marquee marquee-reverse gap-4 md:gap-6">
             {[...duplicatedTestimonials].reverse().map((testimonial, index) => (
               <div
                 key={`row2-${index}`}
-                className="testimonial-card flex-shrink-0 w-[380px] md:w-[450px]"
+                className="testimonial-card flex-shrink-0 w-[300px] md:w-[380px] lg:w-[450px]"
               >
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
@@ -204,7 +204,7 @@ const Testimonials = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="container mx-auto px-6 lg:px-12 mt-16 text-center"
+        className="container mx-auto px-4 md:px-6 lg:px-12 mt-12 md:mt-16 text-center"
       >
         <a
           href="https://www.google.com/search?q=dr+marcelo+hanato#lrd=0x89ad6d5c90bf4833:0xc1d30014f05c9298,1"

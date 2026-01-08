@@ -16,12 +16,12 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="sobre" ref={ref} className="py-32 lg:py-40 relative overflow-hidden">
+    <section id="sobre" ref={ref} className="py-20 md:py-32 lg:py-40 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-navy-medium to-background" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-center">
           {/* Image Column */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

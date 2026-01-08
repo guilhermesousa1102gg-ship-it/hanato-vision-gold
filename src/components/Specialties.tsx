@@ -42,18 +42,18 @@ const Specialties = () => {
     <section
       id="blefaroplastia"
       ref={ref}
-      className="py-32 lg:py-40 relative overflow-hidden"
+      className="py-20 md:py-32 lg:py-40 relative overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-background" />
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16 lg:mb-24"
+          className="text-center mb-12 md:mb-16 lg:mb-24"
         >
           <span className="section-subtitle">Procedimento</span>
           <h2 className="section-title text-foreground">
@@ -71,33 +71,33 @@ const Specialties = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto mb-24 lg:mb-32"
+          className="max-w-4xl mx-auto mb-16 md:mb-24 lg:mb-32"
         >
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-            <div className="text-center p-6 border border-border/30 bg-card/20">
-              <span className="text-4xl font-cormorant text-primary mb-4 block">30-60</span>
-              <span className="text-xs tracking-[0.2em] text-foreground/40 uppercase">Minutos de Cirurgia</span>
+          <div className="grid grid-cols-3 gap-4 md:gap-8 lg:gap-12">
+            <div className="text-center p-4 md:p-6 border border-border/30 bg-card/20">
+              <span className="text-2xl md:text-4xl font-cormorant text-primary mb-2 md:mb-4 block">30-60</span>
+              <span className="text-[10px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] text-foreground/40 uppercase">Minutos</span>
             </div>
-            <div className="text-center p-6 border border-border/30 bg-card/20">
-              <span className="text-4xl font-cormorant text-primary mb-4 block">7-10</span>
-              <span className="text-xs tracking-[0.2em] text-foreground/40 uppercase">Dias de Recuperação</span>
+            <div className="text-center p-4 md:p-6 border border-border/30 bg-card/20">
+              <span className="text-2xl md:text-4xl font-cormorant text-primary mb-2 md:mb-4 block">7-10</span>
+              <span className="text-[10px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] text-foreground/40 uppercase">Dias Recuperação</span>
             </div>
-            <div className="text-center p-6 border border-border/30 bg-card/20">
-              <span className="text-4xl font-cormorant text-primary mb-4 block">Local</span>
-              <span className="text-xs tracking-[0.2em] text-foreground/40 uppercase">Tipo de Anestesia</span>
+            <div className="text-center p-4 md:p-6 border border-border/30 bg-card/20">
+              <span className="text-2xl md:text-4xl font-cormorant text-primary mb-2 md:mb-4 block">Local</span>
+              <span className="text-[10px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] text-foreground/40 uppercase">Anestesia</span>
             </div>
           </div>
         </motion.div>
 
         {/* Blepharoplasty Types - Rolex Style */}
-        <div className="space-y-32 lg:space-y-48">
+        <div className="space-y-20 md:space-y-32 lg:space-y-48">
           {blepharoplastyTypes.map((item, index) => (
             <motion.div
               key={item.id}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 + index * 0.2 }}
-              className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
+              className={`grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
             >
@@ -168,7 +168,7 @@ const Specialties = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="max-w-3xl mx-auto mt-32 text-center"
+          className="max-w-3xl mx-auto mt-20 md:mt-32 text-center"
         >
           <h3 className="text-2xl lg:text-3xl font-cormorant text-foreground mb-6">
             Diferencial Único
