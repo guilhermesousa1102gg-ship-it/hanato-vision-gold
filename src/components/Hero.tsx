@@ -50,7 +50,7 @@ const Hero = () => {
             className="absolute inset-0 bg-cover bg-no-repeat md:hidden"
             style={{
               backgroundImage: `url(${drMarceloHero})`,
-              backgroundPosition: "calc(50% + 60px) 20%",
+              backgroundPosition: "calc(50% + 100px) 15%",
             }}
           />
           {/* Gradient Overlay on Image */}
