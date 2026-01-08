@@ -46,12 +46,12 @@ const Hero = () => {
               backgroundPosition: "center 10%",
             }}
           />
-          {/* Mobile: position to far right to show full face */}
+          {/* Mobile: position to left to show full face on right */}
           <div
             className="absolute inset-0 bg-cover bg-no-repeat md:hidden"
             style={{
               backgroundImage: `url(${drMarceloHero})`,
-              backgroundPosition: "85% 0%",
+              backgroundPosition: "30% 0%",
             }}
           />
           {/* Gradient Overlay on Image */}
