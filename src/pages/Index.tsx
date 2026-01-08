@@ -23,11 +23,11 @@ const Index = () => {
       {/* Main Content */}
       <main>
         <Hero />
+        <VideoSection />
         <About />
         <VisualBreakEye />
         <Specialties />
         <Differentials />
-        <VideoSection />
         <Testimonials />
         <VisualBreakDoctor />
         <FAQ />
