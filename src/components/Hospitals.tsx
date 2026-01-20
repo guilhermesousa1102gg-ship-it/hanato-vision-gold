@@ -42,22 +42,22 @@ const Hospitals = () => {
   return (
     <section
       ref={ref}
-      className="py-20 md:py-28 relative overflow-hidden bg-cream-light"
+      className="py-20 md:py-28 relative overflow-hidden bg-cream"
     >
       {/* Radial gradient background like reference */}
       <div 
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-20"
         style={{
-          background: "radial-gradient(ellipse 80% 50% at 20% 50%, transparent 0%, hsl(var(--cream-light)) 100%)",
+          background: "radial-gradient(ellipse 80% 50% at 20% 50%, hsl(var(--primary) / 0.1) 0%, transparent 100%)",
         }}
       />
       
       {/* Circular lines decoration */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-10 pointer-events-none">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-5 pointer-events-none">
         {[...Array(8)].map((_, i) => (
           <div
             key={i}
-            className="absolute border border-navy/30 rounded-full"
+            className="absolute border border-primary/40 rounded-full"
             style={{
               width: `${100 + i * 80}px`,
               height: `${100 + i * 80}px`,
@@ -77,9 +77,9 @@ const Hospitals = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cormorant text-navy leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cormorant text-foreground leading-tight">
               Hospitais que<br />
-              <span className="italic">operamos</span>:
+              <span className="italic text-gradient-gold">operamos</span>:
             </h2>
           </motion.div>
 
@@ -102,7 +102,7 @@ const Hospitals = () => {
                   <div className="mb-2 opacity-60 group-hover:opacity-100 transition-opacity">
                     <svg 
                       viewBox="0 0 24 24" 
-                      className="w-6 h-6 text-navy/60"
+                      className="w-6 h-6 text-primary"
                       fill="none" 
                       stroke="currentColor" 
                       strokeWidth="1.5"
@@ -113,11 +113,11 @@ const Hospitals = () => {
                   </div>
                   
                   {/* Hospital Name */}
-                  <span className="text-navy font-semibold text-xs md:text-sm tracking-wider">
+                  <span className="text-foreground font-semibold text-xs md:text-sm tracking-wider">
                     {hospital.displayName}
                   </span>
                   {hospital.subtitle && (
-                    <span className="text-navy/50 text-[10px] md:text-xs tracking-wide mt-0.5">
+                    <span className="text-foreground/60 text-[10px] md:text-xs tracking-wide mt-0.5">
                       {hospital.subtitle}
                     </span>
                   )}
