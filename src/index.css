@@ -130,7 +130,7 @@
 
   /* Hero Button - Refined */
   .btn-hero {
-    @apply relative overflow-hidden px-10 py-4 font-medium text-xs tracking-[0.25em] uppercase;
+    @apply relative overflow-hidden px-6 py-3.5 md:px-10 md:py-4 font-medium text-xs tracking-[0.15em] md:tracking-[0.25em] uppercase text-center w-full sm:w-auto;
     background: linear-gradient(135deg, hsl(40 55% 55%), hsl(40 50% 50%));
     color: hsl(var(--primary-foreground));
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -155,7 +155,7 @@
 
   /* Outline Button - Refined */
   .btn-outline-gold {
-    @apply px-10 py-4 font-medium text-xs tracking-[0.25em] uppercase;
+    @apply px-6 py-3.5 md:px-10 md:py-4 font-medium text-xs tracking-[0.15em] md:tracking-[0.25em] uppercase text-center w-full sm:w-auto;
     @apply border border-primary/50 text-primary;
     background: transparent;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -237,7 +237,7 @@
 
   /* Testimonial Card */
   .testimonial-card {
-    @apply flex-shrink-0 w-[400px] md:w-[500px] p-8 md:p-10;
+    @apply flex-shrink-0 w-[280px] sm:w-[350px] md:w-[450px] p-5 sm:p-6 md:p-10;
     background: hsla(220 35% 8% / 0.9);
     border: 1px solid hsla(40 55% 55% / 0.1);
   }

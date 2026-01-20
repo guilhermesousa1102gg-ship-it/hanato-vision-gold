@@ -34,7 +34,7 @@ const Header = () => {
           : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="relative z-10">

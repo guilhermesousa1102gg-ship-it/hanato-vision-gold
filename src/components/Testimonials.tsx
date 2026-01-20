@@ -114,17 +114,17 @@ const Testimonials = () => {
 
       {/* Infinite Scrolling Testimonials */}
       <div className="relative">
-        {/* Gradient Masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+        {/* Gradient Masks - Smaller on mobile */}
+        <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 
         {/* First Row - Left to Right */}
-        <div className="overflow-hidden mb-4 md:mb-6">
-          <div className="marquee gap-4 md:gap-6">
+        <div className="overflow-hidden mb-3 md:mb-6">
+          <div className="marquee gap-3 sm:gap-4 md:gap-6">
             {duplicatedTestimonials.map((testimonial, index) => (
               <div
                 key={`row1-${index}`}
-                className="testimonial-card flex-shrink-0 w-[300px] md:w-[380px] lg:w-[450px]"
+                className="testimonial-card"
               >
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
@@ -160,11 +160,11 @@ const Testimonials = () => {
 
         {/* Second Row - Right to Left */}
         <div className="overflow-hidden">
-          <div className="marquee marquee-reverse gap-4 md:gap-6">
+          <div className="marquee marquee-reverse gap-3 sm:gap-4 md:gap-6">
             {[...duplicatedTestimonials].reverse().map((testimonial, index) => (
               <div
                 key={`row2-${index}`}
-                className="testimonial-card flex-shrink-0 w-[300px] md:w-[380px] lg:w-[450px]"
+                className="testimonial-card"
               >
                 {/* Rating */}
                 <div className="flex gap-1 mb-4">
@@ -210,7 +210,7 @@ const Testimonials = () => {
           href="https://www.google.com/search?q=dr+marcelo+hanato&rlz=1C5CHFA_enBR1168BR1169&oq=dr+marcelo+hanato&gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxiABDIJCAAQRRg7GIAEMggIARAAGBYYHjIICAIQABgWGB4yCggDEAAYogQYiQUyCggEEAAYgAQYogQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGD3SAQgzNDM0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x89ad6d5c90bf4833:0xc1d30014f05c9298,1"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-8 py-4 border-2 border-primary text-primary font-medium tracking-wider uppercase text-sm rounded-sm hover:bg-primary hover:text-white transition-all duration-300"
+          className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 py-3.5 md:px-8 md:py-4 border-2 border-primary text-primary font-medium tracking-wider uppercase text-xs sm:text-sm rounded-sm hover:bg-primary hover:text-white transition-all duration-300 w-full sm:w-auto max-w-sm mx-auto sm:max-w-none"
         >
           Ver Todas as Avaliações
           <ExternalLink size={16} />

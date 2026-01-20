@@ -11,9 +11,9 @@ const Footer = () => {
       <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
 
       {/* Main Footer */}
-      <div className="bg-navy-medium py-20 lg:py-28">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+      <div className="bg-navy-medium py-12 md:py-20 lg:py-28">
+        <div className="container mx-auto px-4 md:px-6 lg:px-12">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
             {/* Brand Column */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -138,7 +138,7 @@ const Footer = () => {
                 href="https://wa.link/vjbxr3"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline-gold text-[10px] inline-block"
+                className="inline-flex items-center justify-center px-5 py-2.5 border border-primary/50 text-primary font-medium text-[10px] tracking-[0.15em] uppercase hover:bg-primary/10 transition-all duration-300"
               >
                 Agendar Consulta
               </a>
@@ -148,8 +148,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-background py-6 border-t border-border/20">
-        <div className="container mx-auto px-6 lg:px-12">
+      <div className="bg-background py-4 md:py-6 border-t border-border/20">
+        <div className="container mx-auto px-4 md:px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-foreground/30 text-xs tracking-wide">
               © {currentYear} Dr. Marcelo Hanato. Todos os direitos reservados.

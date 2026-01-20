@@ -73,7 +73,7 @@ const Locations = () => {
         </motion.div>
 
         {/* Locations Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 lg:gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6">
           {locations.map((location, index) => (
             <motion.div
               key={location.city}

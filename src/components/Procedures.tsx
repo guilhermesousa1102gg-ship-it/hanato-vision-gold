@@ -112,11 +112,12 @@ const Procedures = () => {
               }`}
             >
               {/* Image */}
-              <div className={`relative aspect-[4/5] overflow-hidden ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+              <div className={`relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] overflow-hidden ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                 <img
                   src={procedure.image}
                   alt={procedure.title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
@@ -142,7 +143,7 @@ const Procedures = () => {
                   href="https://wa.link/vjbxr3"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 px-6 py-3 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors text-sm tracking-wider uppercase"
+                  className="inline-flex items-center justify-center gap-3 px-6 py-3.5 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors text-xs tracking-[0.15em] uppercase w-full sm:w-auto"
                 >
                   Agende uma Consulta
                   <ArrowRight size={16} />
