@@ -88,20 +88,41 @@ const Hospitals = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-6"
           >
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 items-center">
-              {hospitals.map((hospital, index) => (
+            {/* First row - 2 logos centered */}
+            <div className="flex justify-center gap-6 md:gap-10">
+              {hospitals.slice(0, 2).map((hospital, index) => (
                 <motion.div
                   key={hospital.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center justify-center p-4 bg-white/95 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  className="flex items-center justify-center p-4 bg-white/95 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-[140px] md:w-[180px]"
                 >
                   <img 
                     src={hospital.logo} 
                     alt={hospital.name}
-                    className="max-h-16 md:max-h-20 w-auto object-contain"
+                    className="max-h-14 md:max-h-16 w-auto object-contain"
+                  />
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Second row - 3 logos */}
+            <div className="flex justify-center gap-6 md:gap-10">
+              {hospitals.slice(2).map((hospital, index) => (
+                <motion.div
+                  key={hospital.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                  className="flex items-center justify-center p-4 bg-white/95 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-[140px] md:w-[180px]"
+                >
+                  <img 
+                    src={hospital.logo}
+                    alt={hospital.name}
+                    className="max-h-14 md:max-h-16 w-auto object-contain"
                   />
                 </motion.div>
               ))}
