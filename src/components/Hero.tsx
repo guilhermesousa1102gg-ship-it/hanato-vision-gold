@@ -61,8 +61,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 px-6 lg:px-12" style={{ opacity: textOpacity }}>
-        <div className="max-w-2xl">
+      <div className="container relative z-10 px-4 sm:px-6 lg:px-12" style={{ opacity: textOpacity }}>
+        <div className="max-w-xl lg:max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-cormorant mb-8 leading-[0.95]"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-cormorant mb-6 md:mb-8 leading-[0.95]"
           >
             <span className="block text-foreground">Dr. Marcelo</span>
             <span className="text-gradient-gold italic">Hanato</span>
@@ -110,7 +110,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <a
               href="https://wa.link/vjbxr3"

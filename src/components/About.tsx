@@ -36,6 +36,7 @@ const About = () => {
                   src={drMarcelo}
                   alt="Dr. Marcelo Hanato"
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>

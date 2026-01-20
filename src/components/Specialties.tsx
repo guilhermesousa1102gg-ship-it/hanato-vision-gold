@@ -110,6 +110,7 @@ const Specialties = () => {
                     className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.6 }}
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
                   
@@ -131,7 +132,7 @@ const Specialties = () => {
                 <span className="text-xs tracking-[0.3em] text-primary/60 uppercase mb-4 block">
                   {item.subtitle}
                 </span>
-                <h3 className="text-4xl lg:text-5xl xl:text-6xl font-cormorant text-foreground mb-6">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-cormorant text-foreground mb-4 md:mb-6">
                   {item.title}
                 </h3>
 
@@ -154,7 +155,7 @@ const Specialties = () => {
                   href="https://wa.link/vjbxr3"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-outline-gold inline-block"
+                  className="inline-flex items-center justify-center px-6 py-3.5 md:px-10 md:py-4 border border-primary/50 text-primary font-medium text-xs tracking-[0.15em] md:tracking-[0.25em] uppercase hover:bg-primary/10 transition-all duration-300 w-full sm:w-auto"
                 >
                   Agendar Avaliação
                 </a>
@@ -183,7 +184,8 @@ const Specialties = () => {
             href="https://wa.link/vjbxr3"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-hero inline-block"
+            className="inline-flex items-center justify-center px-6 py-3.5 md:px-10 md:py-4 font-medium text-xs tracking-[0.15em] md:tracking-[0.25em] uppercase w-full sm:w-auto"
+            style={{ background: 'linear-gradient(135deg, hsl(40 55% 55%), hsl(40 50% 50%))', color: 'hsl(220 40% 5%)' }}
           >
             Agende sua Consulta
           </a>
