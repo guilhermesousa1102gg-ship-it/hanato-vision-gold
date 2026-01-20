@@ -97,7 +97,7 @@ const Testimonials = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center text-foreground/50 max-w-2xl mx-auto mb-4"
         >
-          Mais de 100 avaliações 5 estrelas no Google. Confira o que nossas pacientes dizem sobre sua experiência.
+          Todas as avaliações no Google são 5 estrelas. Confira o que as nossas pacientes dizem sobre a sua experiência.
         </motion.p>
 
         <motion.div
