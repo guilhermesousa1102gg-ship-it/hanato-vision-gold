@@ -207,10 +207,10 @@ const Testimonials = () => {
         className="container mx-auto px-4 md:px-6 lg:px-12 mt-12 md:mt-16 text-center"
       >
         <a
-          href="https://www.google.com/search?q=dr+marcelo+hanato#lrd=0x89ad6d5c90bf4833:0xc1d30014f05c9298,1"
+          href="https://www.google.com/search?q=dr+marcelo+hanato&rlz=1C5CHFA_enBR1168BR1169&oq=dr+marcelo+hanato&gs_lcrp=EgZjaHJvbWUqCQgAEEUYOxiABDIJCAAQRRg7GIAEMggIARAAGBYYHjIICAIQABgWGB4yCggDEAAYogQYiQUyCggEEAAYgAQYogQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGD3SAQgzNDM0ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x89ad6d5c90bf4833:0xc1d30014f05c9298,1"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-outline-gold inline-flex items-center gap-3"
+          className="inline-flex items-center gap-3 px-8 py-4 border-2 border-primary text-primary font-medium tracking-wider uppercase text-sm rounded-sm hover:bg-primary hover:text-white transition-all duration-300"
         >
           Ver Todas as Avaliações
           <ExternalLink size={16} />
