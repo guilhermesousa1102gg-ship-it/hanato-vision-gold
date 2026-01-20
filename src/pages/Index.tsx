@@ -13,6 +13,7 @@ import Hospitals from "@/components/Hospitals";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BookSection from "@/components/BookSection";
 
 const Index = () => {
   return (
@@ -34,6 +35,7 @@ const Index = () => {
         <Differentials />
         <Testimonials />
         <VisualBreakDoctor />
+        <BookSection />
         <FAQ />
         <Locations />
         <Hospitals />
