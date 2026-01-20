@@ -14,18 +14,6 @@ interface Procedure {
   image: string;
   featured?: boolean;
 }
-const mainProcedure: Procedure = {
-  id: "blefaroplastia-co2",
-  title: "Blefaroplastia com Laser CO2",
-  description: [
-    "Saiba mais sobre o procedimento que eu mais realizo.",
-    "A blefaroplastia com laser de CO2 é uma técnica avançada que combina a precisão cirúrgica com os benefícios do laser para rejuvenescimento das pálpebras.",
-    "O laser de CO2 permite uma incisão mais precisa, com menor sangramento e uma recuperação mais rápida, além de estimular a produção de colágeno para resultados mais naturais e duradouros."
-  ],
-  image: procLaserCo2,
-  featured: true,
-};
-
 const associatedProcedures: Procedure[] = [
   {
     id: "resurfacing",
@@ -110,46 +98,6 @@ const Procedures = () => {
           <div className="w-16 h-px bg-primary/50 mx-auto mt-8" />
         </motion.div>
 
-        {/* Two Column Layout - Main and Associated */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Main Procedure - Blefaroplastia CO2 */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="absolute -left-4 top-0 text-primary/20 text-lg font-cormorant">/</div>
-            <h3 className="text-2xl md:text-3xl font-cormorant text-foreground mb-4 pl-4">
-              {mainProcedure.title}
-            </h3>
-            <p className="text-sm text-foreground/50 mb-6 pl-4 italic">
-              {mainProcedure.description[0]}
-            </p>
-            
-            {/* Image */}
-            <div className="relative aspect-[4/5] overflow-hidden mb-6">
-              <img
-                src={mainProcedure.image}
-                alt={mainProcedure.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-            </div>
-
-            {/* CTA Button */}
-            <a
-              href="https://wa.link/vjbxr3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm tracking-wider uppercase"
-            >
-              Saiba Mais Por Aqui
-              <ArrowRight size={16} />
-            </a>
-          </motion.div>
-
-        </div>
 
         {/* Individual Procedure Cards */}
         <div className="mt-20 space-y-20">
