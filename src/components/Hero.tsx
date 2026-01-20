@@ -54,15 +54,9 @@ const Hero = () => {
               backgroundPosition: "30% 0%",
             }}
           />
-          {/* Soft white gradient overlay - strong on left for text, fading to right */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: "linear-gradient(to right, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.6) 15%, rgba(255,255,255,0.3) 30%, rgba(255,255,255,0.1) 45%, transparent 60%)",
-            }}
-          />
-          {/* Subtle bottom gradient for depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+          {/* Gradient Overlay on Image */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/20" />
         </motion.div>
       </div>
 
