@@ -37,7 +37,7 @@ const locations: Location[] = [
   {
     city: "Bertioga",
     region: "Litoral SP",
-    address: "Rua Luís Pereira de Campos, 989, Centro",
+    address: "Praça Vicente Molinari, 37, bairro Vila Itapanhau",
     neighborhoods: ["Atendimento em toda a cidade"],
     whatsapp: "https://wa.link/gii6i8",
     featured: false,
