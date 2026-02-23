@@ -45,16 +45,6 @@ const About = () => {
               <div className="absolute -top-6 -left-6 w-24 h-24 border-l border-t border-primary/30" />
               <div className="absolute -bottom-6 -right-6 w-24 h-24 border-r border-b border-primary/30" />
 
-              {/* Experience Badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="absolute -bottom-8 -right-4 lg:-right-8 bg-background border border-primary/20 p-6"
-              >
-                <span className="text-5xl font-cormorant text-gradient-gold block">+10</span>
-                <span className="text-xs tracking-[0.2em] text-foreground/50 uppercase">Anos de Experiência</span>
-              </motion.div>
             </div>
           </motion.div>
 
