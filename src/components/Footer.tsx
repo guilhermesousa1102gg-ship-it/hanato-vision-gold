@@ -42,7 +42,7 @@ const Footer = () => {
                   <Instagram size={18} className="text-foreground/60" />
                 </a>
                 <a
-                  href="https://wa.link/vjbxr3"
+                  href="https://api.whatsapp.com/send?phone=5511963799408"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 border border-border/30 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all"
@@ -135,7 +135,7 @@ const Footer = () => {
                 </li>
               </ul>
               <a
-                href="https://wa.link/vjbxr3"
+                href="https://api.whatsapp.com/send?phone=5511963799408"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-5 py-2.5 border border-primary/50 text-primary font-medium text-[10px] tracking-[0.15em] uppercase hover:bg-primary/10 transition-all duration-300"

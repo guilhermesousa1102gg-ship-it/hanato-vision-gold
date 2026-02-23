@@ -40,7 +40,7 @@ const Specialties = () => {
 
   return (
     <section
-      id="blefaroplastia"
+      id="especialidades"
       ref={ref}
       className="py-20 md:py-32 lg:py-40 relative overflow-hidden"
     >
@@ -152,7 +152,7 @@ const Specialties = () => {
                 </div>
 
                 <a
-                  href="https://wa.link/vjbxr3"
+                  href="https://api.whatsapp.com/send?phone=5511963799408"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3.5 md:px-10 md:py-4 border border-primary/50 text-primary font-medium text-xs tracking-[0.15em] md:tracking-[0.25em] uppercase hover:bg-primary/10 transition-all duration-300 w-full sm:w-auto"
@@ -181,7 +181,7 @@ const Specialties = () => {
             mas também total segurança para a saúde ocular.
           </p>
           <a
-            href="https://wa.link/vjbxr3"
+            href="https://api.whatsapp.com/send?phone=5511963799408"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-6 py-3.5 md:px-10 md:py-4 font-medium text-xs tracking-[0.15em] md:tracking-[0.25em] uppercase w-full sm:w-auto"
