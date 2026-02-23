@@ -113,7 +113,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
             <a
-              href="https://wa.link/vjbxr3"
+              href="https://api.whatsapp.com/send?phone=5511963799408"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-hero"
@@ -121,7 +121,7 @@ const Hero = () => {
               Agende sua Consulta
             </a>
             <a
-              href="#blefaroplastia"
+              href="#especialidades"
               className="btn-outline-gold"
             >
               Conheça o Procedimento

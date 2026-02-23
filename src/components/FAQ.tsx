@@ -119,7 +119,7 @@ const FAQ = () => {
             Ainda tem dúvidas sobre blefaroplastia? Entre em contato
           </p>
           <a
-            href="https://wa.link/vjbxr3"
+            href="https://api.whatsapp.com/send?phone=5511963799408"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-hero"

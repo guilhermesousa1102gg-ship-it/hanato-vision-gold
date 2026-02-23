@@ -61,7 +61,7 @@ const Header = () => {
               <Instagram size={18} />
             </a>
             <a
-              href="https://wa.link/vjbxr3"
+              href="https://api.whatsapp.com/send?phone=5511963799408"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline-gold text-[10px] py-3 px-6"
@@ -106,7 +106,7 @@ const Header = () => {
               ))}
               <div className="pt-4 border-t border-border/20">
                 <a
-                  href="https://wa.link/vjbxr3"
+                  href="https://api.whatsapp.com/send?phone=5511963799408"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-hero w-full text-center block"

@@ -140,7 +140,7 @@ const Procedures = () => {
                 </div>
 
                 <a
-                  href="https://wa.link/vjbxr3"
+                  href="https://api.whatsapp.com/send?phone=5511963799408"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 px-6 py-3.5 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors text-xs tracking-[0.15em] uppercase w-full sm:w-auto"
